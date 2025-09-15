@@ -44,3 +44,13 @@ describe "testeando a trinity" {
     assert.notThat(trinity.esElegido())
   }
 }
+
+describe "TESTEANDO LA NAVE" {
+  test "CANTIDAD TOTAL DE PASAJEROS" {
+    assert.equals(3, nave.cantidadPasajeros())
+  }
+  
+  test "pasajero con mayor vitalidad" {
+    assert.equals(neo, nave.pasajeroMayorVitalidad())
+  }
+}

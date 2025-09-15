@@ -2,17 +2,13 @@ import matrix.*
 
 
 object nave{
-    const pasajeros = []
+    const pasajeros = #{neo, morfeo, trinity}
 
-
-    method agregarPasajero(unPasajero) {
-        pasajeros.add(unPasajero)
-    }
 
     method cantidadPasajeros() = pasajeros.size()
 
     method pasajeroMayorVitalidad() {
-      return pasajeros.maximo(pasajeros-> pasajeros.vitalidad())
+      return pasajeros.max({p => p.vitalidad()})
     }
 
     method acelerar() {
