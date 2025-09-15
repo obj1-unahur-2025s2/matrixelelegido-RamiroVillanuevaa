@@ -1,9 +1,24 @@
+import matrix.*
+import nave.*
 
-
-describe "group of tests " {
-
-  test "test 01" {
-    assert.equals(100, 50+50)
+describe "testeando a neo" {
+  test "Neo es el elegido" {
+    assert.that(neo.esElegido())
   }
 
+  test "vitalidad inicial de neo" {
+    assert.equals(10,neo.vitalidad())
+  }
+
+  test "VITALIDAD DE NEO LUEGO DE SALTAR UNA VEZ" {
+    neo.saltar()
+    assert.equals(5,neo.vitalidad())
+  }
+}
+
+describe "testeamos a morfeo" {
+  test "morfeo no es el elegido" {
+    assert.that(morfeo.esElegido()) 
+  }
+  
 }
