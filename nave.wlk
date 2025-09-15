@@ -15,7 +15,12 @@ object nave{
       return pasajeros.maximo(pasajeros-> pasajeros.vitalidad())
     }
 
-    method estaEquilibrada() =  
+    method acelerar() {
+      pasajeros.filter(pasajeros -> pasajeros.esElegido()).each(pasajeros -> pasajeros.saltar())
+    }
+    method saltarTodos() {
+      pasajeros.each(pasajeros -> pasajeros.saltar())
+    } 
 
     
 }

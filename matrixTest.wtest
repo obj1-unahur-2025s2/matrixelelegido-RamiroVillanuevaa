@@ -5,20 +5,42 @@ describe "testeando a neo" {
   test "Neo es el elegido" {
     assert.that(neo.esElegido())
   }
-
+  
   test "vitalidad inicial de neo" {
-    assert.equals(10,neo.vitalidad())
+    assert.equals(10, neo.vitalidad())
   }
-
+  
   test "VITALIDAD DE NEO LUEGO DE SALTAR UNA VEZ" {
     neo.saltar()
-    assert.equals(5,neo.vitalidad())
+    assert.equals(5, neo.vitalidad())
   }
 }
 
 describe "testeamos a morfeo" {
   test "morfeo no es el elegido" {
-    assert.that(morfeo.esElegido()) 
+    assert.that(morfeo.esElegido())
   }
   
+  test "vitalidad inicial de morfeo" {
+    assert.equals(8, morfeo.vitalidad())
+  }
+  
+  test "morfeo esta descansado inicialmente" {
+    assert.notThat(morfeo.estaCansado())
+  }
+  
+  test "morfeo cambia de estado luego de saltar" {
+    morfeo.saltar()
+    assert.that(morfeo.estaCansado())
+  }
+}
+
+describe "testeando a trinity" {
+  test "Vitalidad incial de trinity" {
+    assert.equals(0, trinity.vitalidad())
+  }
+  
+  test "trinity no es el elegido" {
+    assert.notThat(trinity.esElegido())
+  }
 }
