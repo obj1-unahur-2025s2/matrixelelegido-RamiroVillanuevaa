@@ -16,10 +16,11 @@ object nave{
     }
 
     method acelerar() {
-      pasajeros.filter(pasajeros -> pasajeros.esElegido()).each(pasajeros -> pasajeros.saltar())
+      pasajeros.filter(pasajeros -> not(pasajeros.esElegido())).each(pasajeros -> pasajeros.saltar())
     }
-    method saltarTodos() {
+    method chocar() {
       pasajeros.each(pasajeros -> pasajeros.saltar())
+      pasajeros.clear()
     } 
 
     
